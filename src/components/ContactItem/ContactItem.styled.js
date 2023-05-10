@@ -12,13 +12,6 @@ export const Item = styled.li`
   }
 `;
 
-export const Div = styled.div`
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: ${theme.color.black};
-`;
-
 export const ContactName = styled.p`
   margin-right: 10px;
 `;
@@ -32,4 +25,5 @@ export const DeleteButton = styled.button`
   font-size: 18px;
   box-shadow: ${theme.boxShadow};
   background-color: ${theme.color.white};
+  cursor: pointer;
 `;

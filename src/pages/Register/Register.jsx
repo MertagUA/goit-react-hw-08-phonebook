@@ -1,7 +1,15 @@
-import { Formik, ErrorMessage, Form, Field } from 'formik';
+import { Formik, ErrorMessage } from 'formik';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/Auth/operations';
 import * as yup from 'yup';
+import {
+  Div,
+  FormStyled,
+  InputName,
+  InputWrapper,
+  Label,
+  LoginButton,
+} from './Register.styled';
 
 export const Register = () => {
   const dispatch = useDispatch();
@@ -27,20 +35,31 @@ export const Register = () => {
   };
 
   return (
-    <Formik
-      initialValues={initialValues}
-      validationSchema={schema}
-      onSubmit={onRegisterFormSubmit}
-    >
-      <Form>
-        <Field type="text" name="name" />
-        <ErrorMessage name="name" component="div" />
-        <Field type="email" name="email" />
-        <ErrorMessage name="email" component="div" />
-        <Field type="password" name="password" />
-        <ErrorMessage name="password" component="div" />
-        <button type="submit">Submit</button>
-      </Form>
-    </Formik>
+    <Div>
+      <Formik
+        initialValues={initialValues}
+        validationSchema={schema}
+        onSubmit={onRegisterFormSubmit}
+      >
+        <FormStyled>
+          <InputWrapper>
+            <Label htmlFor="username">Username:</Label>
+            <InputName type="text" name="name" id="username" />
+            <ErrorMessage name="name" component="div" />
+          </InputWrapper>
+          <InputWrapper>
+            <Label htmlFor="email">Email:</Label>
+            <InputName type="email" name="email" id="email" />
+            <ErrorMessage name="email" component="div" />
+          </InputWrapper>
+          <InputWrapper>
+            <Label htmlFor="password">Password:</Label>
+            <InputName type="password" name="password" id="password" />
+            <ErrorMessage name="password" component="div" />
+          </InputWrapper>
+          <LoginButton type="submit">Submit</LoginButton>
+        </FormStyled>
+      </Formik>
+    </Div>
   );
 };

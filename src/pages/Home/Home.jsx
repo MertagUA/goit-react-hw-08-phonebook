@@ -1,3 +1,5 @@
+import { Welcome } from 'components/Welcome/Welcome';
+
 export const Home = () => {
-  return <div>Вітаємо в нашому веб-застосунку Phonebook!</div>;
+  return <Welcome />;
 };

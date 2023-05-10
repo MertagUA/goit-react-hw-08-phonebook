@@ -45,6 +45,7 @@ export const Button = styled.button`
   font-weight: 500;
   box-shadow: ${theme.boxShadow};
   background-color: ${theme.color.white};
+  cursor: pointer;
 `;
 
 export const ErrorText = styled.p`
