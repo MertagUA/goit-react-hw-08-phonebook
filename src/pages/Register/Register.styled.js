@@ -8,7 +8,7 @@ export const Div = styled.div`
   align-items: center;
 
   width: 800px;
-  padding: 145px;
+  padding: 175px;
   margin: 0 auto;
 `;
 

@@ -16,4 +16,5 @@ export const Main = styled.main`
   border-top-left-radius: 20px;
   border-left: 2px solid black;
   border-right: 2px solid black;
+  border-bottom: 2px solid black;
 `;
